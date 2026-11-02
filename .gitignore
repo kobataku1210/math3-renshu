@@ -17,3 +17,5 @@ detail_*.txt
 
 # 参考資料（Excel・PDFはGitHub管理外）
 _参考資料/
+# ランキング復旧ツールが作る自動バックアップ
+questions.json.bak.*
