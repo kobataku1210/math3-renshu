@@ -709,7 +709,7 @@
   <!-- ページ切替タブ -->
   <div class="page-tabs">
     <button class="page-tab active" id="page-tab-problems" onclick="switchPage('problems')">📝 問題編集</button>
-    <button class="page-tab" id="page-tab-games" onclick="switchPage('games')">🎮 ゲーム管理</button>
+    <button class="page-tab" id="page-tab-games" onclick="switchPage('games')">🧮 トレーニング管理</button>
     <button class="page-tab" id="page-tab-tools" onclick="switchPage('tools')">🧰 ツール管理</button>
     <button class="page-tab" id="page-tab-news" onclick="switchPage('news')">📰 NEWS</button>
   </div>
@@ -722,7 +722,7 @@
     </div>
   </div>
 
-  <!-- 🎮 ゲーム管理ページ -->
+  <!-- 🧮 トレーニング管理ページ -->
   <div class="page-content hidden" id="page-games">
     <div class="admin-content" style="padding-top:1.5rem;padding-bottom:0;">
       <div class="chapter-tabs" id="game-tabs">
@@ -743,8 +743,8 @@
     <!-- 共通因数ウォール 問題管理 -->
     <div class="game-pane" id="game-pane-wall">
     <div style="padding:0.8rem 2rem 0;">
-      <a href="games/共通因数ウォール.html" target="_blank" rel="noopener"
-         class="preview-game-btn">🎮 ゲームを試す（新しいタブで開く）</a>
+      <a href="practice/共通因数ウォール.html" target="_blank" rel="noopener"
+         class="preview-game-btn">🧮 試してみる（新しいタブで開く）</a>
     </div>
     <!-- 共通因数ウォール 生徒ベスト 上位3名（レベルごと） -->
     <div class="cm-teacher-setting" style="flex-wrap:wrap">
@@ -802,7 +802,7 @@
     <div class="game-pane hidden" id="game-pane-cardmatch">
     <div style="padding:0.8rem 2rem 0;">
       <a href="index.html?preview=draft#cardmatch" target="_blank" rel="noopener"
-         class="preview-game-btn">🎮 ゲームを試す（新しいタブで開く）</a>
+         class="preview-game-btn">🧮 試してみる（新しいタブで開く）</a>
     </div>
     <!-- カードマッチ 小林Tタイム設定 -->
     <div class="cm-teacher-setting">
@@ -839,8 +839,8 @@
     <!-- ルート大小ウォール -->
     <div class="game-pane hidden" id="game-pane-rootbreak">
       <div style="padding:0.8rem 2rem 0;display:flex;gap:0.6rem;flex-wrap:wrap;align-items:center;">
-        <a href="games/ルート大小ウォール.html" target="_blank" rel="noopener"
-           class="preview-game-btn">🎮 ゲームを試す（新しいタブで開く）</a>
+        <a href="practice/ルート大小ウォール.html" target="_blank" rel="noopener"
+           class="preview-game-btn">🧮 試してみる（新しいタブで開く）</a>
         <div id="rootbreak-publish-bar" class="draft-toggle-bar" style="margin:0;flex:1;min-width:280px;"></div>
       </div>
       <div style="padding:1rem 2rem;color:rgba(255,255,255,0.6);font-size:0.88rem;line-height:1.6;">
@@ -857,8 +857,8 @@
     <!-- 数の分類ウォール -->
     <div class="game-pane hidden" id="game-pane-numsort">
       <div style="padding:0.8rem 2rem 0;display:flex;gap:0.6rem;flex-wrap:wrap;align-items:center;">
-        <a href="games/数の分類ウォール.html" target="_blank" rel="noopener"
-           class="preview-game-btn">🎮 ゲームを試す（新しいタブで開く）</a>
+        <a href="practice/数の分類ウォール.html" target="_blank" rel="noopener"
+           class="preview-game-btn">🧮 試してみる（新しいタブで開く）</a>
         <div id="numsort-publish-bar" class="draft-toggle-bar" style="margin:0;flex:1;min-width:280px;"></div>
       </div>
       <div style="padding:1rem 2rem;color:rgba(255,255,255,0.6);font-size:0.88rem;line-height:1.6;">
@@ -877,7 +877,7 @@
     <div class="game-pane hidden" id="game-pane-cardmatch-sqrt">
       <div style="padding:0.8rem 2rem 0;display:flex;gap:0.6rem;flex-wrap:wrap;align-items:center;">
         <a href="index.html?preview=draft" target="_blank" rel="noopener"
-           class="preview-game-btn">🎮 ゲームを試す（新しいタブで開く → 数学ゲーム → カードマッチ平方根）</a>
+           class="preview-game-btn">🧮 試してみる（新しいタブで開く → 計算トレーニング → カードマッチ平方根）</a>
         <div id="cm-sqrt-publish-bar" class="draft-toggle-bar" style="margin:0;flex:1;min-width:280px;">
           <!-- JSで描画 -->
         </div>
@@ -917,8 +917,8 @@
     <!-- 平方根神経衰弱 -->
     <div class="game-pane hidden" id="game-pane-sqrt-memory">
       <div style="padding:0.8rem 2rem 0;">
-        <a href="games/平方根神経衰弱.html" target="_blank" rel="noopener"
-           class="preview-game-btn">🎮 ゲームを試す（新しいタブで開く）</a>
+        <a href="practice/平方根神経衰弱.html" target="_blank" rel="noopener"
+           class="preview-game-btn">🧮 試してみる（新しいタブで開く）</a>
       </div>
       <div style="padding:1rem 2rem;color:rgba(255,255,255,0.6);font-size:0.88rem;line-height:1.6;">
         <p><b>平方根神経衰弱</b> は、平方数のルートを外す練習ができる神経衰弱ゲームです。</p>
@@ -935,8 +935,8 @@
     <!-- ルートの宝石 -->
     <div class="game-pane hidden" id="game-pane-rootgem">
       <div style="padding:0.8rem 2rem 0;">
-        <a href="games/ルートの宝石.html" target="_blank" rel="noopener"
-           class="preview-game-btn">🎮 ゲームを試す（新しいタブで開く）</a>
+        <a href="practice/ルートの宝石.html" target="_blank" rel="noopener"
+           class="preview-game-btn">🧮 試してみる（新しいタブで開く）</a>
       </div>
       <div style="padding:1rem 2rem;color:rgba(255,255,255,0.6);font-size:0.88rem;line-height:1.6;">
         <p><b>ルートの宝石</b> は、√n の中に隠れている平方数を見つけて簡約のしくみを体感するゲームです。</p>
@@ -954,8 +954,8 @@
     <!-- 平方根の方程式 -->
     <div class="game-pane hidden" id="game-pane-sqrt-eq">
       <div style="padding:0.8rem 2rem 0;display:flex;gap:0.6rem;flex-wrap:wrap;align-items:center;">
-        <a href="games/平方根の方程式.html" target="_blank" rel="noopener"
-           class="preview-game-btn">🎮 ゲームを試す（新しいタブで開く）</a>
+        <a href="practice/平方根の方程式.html" target="_blank" rel="noopener"
+           class="preview-game-btn">🧮 試してみる（新しいタブで開く）</a>
         <div id="sqrt-eq-publish-bar" class="draft-toggle-bar" style="margin:0;flex:1;min-width:280px;"></div>
       </div>
       <div style="padding:1rem 2rem;color:rgba(255,255,255,0.6);font-size:0.88rem;line-height:1.6;">
@@ -974,8 +974,8 @@
     <!-- 因数分解ディフェンス -->
     <div class="game-pane hidden" id="game-pane-factor-defense">
       <div style="padding:0.8rem 2rem 0;display:flex;gap:0.6rem;flex-wrap:wrap;align-items:center;">
-        <a href="games/因数分解ディフェンス.html" target="_blank" rel="noopener"
-           class="preview-game-btn">🎮 ゲームを試す（新しいタブで開く）</a>
+        <a href="practice/因数分解ディフェンス.html" target="_blank" rel="noopener"
+           class="preview-game-btn">🧮 試してみる（新しいタブで開く）</a>
         <div id="factor-defense-publish-bar" class="draft-toggle-bar" style="margin:0;flex:1;min-width:280px;"></div>
       </div>
       <div style="padding:1rem 2rem;color:rgba(255,255,255,0.6);font-size:0.88rem;line-height:1.6;">
@@ -1000,8 +1000,8 @@
     <!-- 放物線シュート -->
     <div class="game-pane hidden" id="game-pane-parabola-shot">
       <div style="padding:0.8rem 2rem 0;display:flex;gap:0.6rem;flex-wrap:wrap;align-items:center;">
-        <a href="games/放物線シュート.html" target="_blank" rel="noopener"
-           class="preview-game-btn">🎮 ゲームを試す（新しいタブで開く）</a>
+        <a href="practice/放物線シュート.html" target="_blank" rel="noopener"
+           class="preview-game-btn">🧮 試してみる（新しいタブで開く）</a>
         <div id="parabola-shot-publish-bar" class="draft-toggle-bar" style="margin:0;flex:1;min-width:280px;"></div>
       </div>
       <div style="padding:1rem 2rem;color:rgba(255,255,255,0.6);font-size:0.88rem;line-height:1.6;">
@@ -1024,8 +1024,8 @@
     <!-- 相似の三角形ハンター -->
     <div class="game-pane hidden" id="game-pane-soji-hunter">
       <div style="padding:0.8rem 2rem 0;display:flex;gap:0.6rem;flex-wrap:wrap;align-items:center;">
-        <a href="games/相似ハンター.html" target="_blank" rel="noopener"
-           class="preview-game-btn">🎮 ゲームを試す（新しいタブで開く）</a>
+        <a href="practice/相似ハンター.html" target="_blank" rel="noopener"
+           class="preview-game-btn">🧮 試してみる（新しいタブで開く）</a>
         <div id="soji-hunter-publish-bar" class="draft-toggle-bar" style="margin:0;flex:1;min-width:280px;"></div>
       </div>
       <div style="padding:1rem 2rem;color:rgba(255,255,255,0.6);font-size:0.88rem;line-height:1.6;">

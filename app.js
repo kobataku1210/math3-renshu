@@ -7,7 +7,7 @@ const STORAGE_KEY = 'mathPrint_v2';
 
 // 公開バージョン（設定を変えたら version.json と一緒にこの値を更新する）
 // 生徒のブラウザが古いキャッシュのままにならないよう、起動時に最新版か確認する
-const APP_VERSION = '2026-10-26c';
+const APP_VERSION = '2026-11-04a';
 
 // プレビューモードは先生パスワードで保護。
 // URL に ?preview=draft があり、かつ この端末で先生認証済み(localStorage)のときだけ有効。
@@ -764,7 +764,7 @@ function initBattleBanner() {
         }
         const share = document.getElementById('bt-ip-board-share');
         if (share && d.ip) {
-          share.textContent = `https://kobataku1210.github.io/suugaku-print/?ip=${d.ip}`;
+          share.textContent = `https://kobataku1210.github.io/math3-renshu/?ip=${d.ip}`;
         }
       })
       .catch(() => {});
@@ -935,7 +935,7 @@ function renderHome() {
     <div class="gm-home-banner" onclick="navigate('games')">
       <span class="gm-home-icon">🎮</span>
       <div class="gm-home-text">
-        <div class="gm-home-title">数学ゲーム ${categoryNewBadge(GAME_ITEMS)}</div>
+        <div class="gm-home-title">計算トレーニング ${categoryNewBadge(GAME_ITEMS)}</div>
         <div class="gm-home-sub">気分転換に遊んで、学習しよう！</div>
       </div>
       <div class="gm-home-arrow">›</div>
@@ -1110,7 +1110,7 @@ const GAME_ITEMS = [
     title: '共通因数ウォール',
     desc: '共通因数をくくり出してウォールを崩せ！',
     icon: '🧱',
-    onclick: "window.location.href='games/共通因数ウォール.html?_v=' + APP_VERSION",
+    onclick: "window.location.href='practice/共通因数ウォール.html?_v=' + APP_VERSION",
     gradient: 'linear-gradient(135deg, #ff8a2a, #e05a00)',
     newSince: '2026-05-03', // この日から7日間 NEW!
     category: 'factor',
@@ -1119,7 +1119,7 @@ const GAME_ITEMS = [
     title: 'ルート大小ウォール',
     desc: '√や整数の大小で大きい方の壁をタップ！',
     icon: '📏',
-    onclick: "window.location.href='games/ルート大小ウォール.html?_v=' + APP_VERSION",
+    onclick: "window.location.href='practice/ルート大小ウォール.html?_v=' + APP_VERSION",
     gradient: 'linear-gradient(135deg, #4a90e2, #6c5ce7)',
     newSince: '2026-05-19', // この日から7日間 NEW!
     draftKey: 'rootBreak',
@@ -1129,7 +1129,7 @@ const GAME_ITEMS = [
     title: '数の分類ウォール',
     desc: '有理数/無理数 → 整数/非整数 → 自然数/非自然数 を仕分けよう',
     icon: '📦',
-    onclick: "window.location.href='games/数の分類ウォール.html?_v=' + APP_VERSION",
+    onclick: "window.location.href='practice/数の分類ウォール.html?_v=' + APP_VERSION",
     gradient: 'linear-gradient(135deg, #8b5cf6, #6d28d9)',
     newSince: '2026-05-26', // この日から7日間 NEW!
     draftKey: 'numSort',
@@ -1139,16 +1139,16 @@ const GAME_ITEMS = [
     title: '計算バトル',
     desc: '1台で2人対戦！因数分解で計算を一気に終わらせて相手のHPを削れ',
     icon: '⚔️',
-    onclick: "window.location.href='games/計算バトル.html?_v=' + APP_VERSION",
+    onclick: "window.location.href='practice/計算バトル.html?_v=' + APP_VERSION",
     gradient: 'linear-gradient(135deg, #3a8aff, #ff3a6a)',
     newSince: '2026-05-12', // この日から7日間 NEW!
     category: 'factor',
   },
   {
     title: '平方根神経衰弱',
-    desc: '√4 と 2、√9 と 3…ルートを外した数をペアで揃えるメモリーゲーム!',
+    desc: '√4 と 2、√9 と 3…ルートを外した数をペアで揃える神経衰弱！',
     icon: '🃏',
-    onclick: "window.location.href='games/平方根神経衰弱.html?_v=' + APP_VERSION",
+    onclick: "window.location.href='practice/平方根神経衰弱.html?_v=' + APP_VERSION",
     gradient: 'linear-gradient(135deg, #2196f3, #0d47a1)',
     newSince: '2026-06-04', // この日から7日間 NEW!
     category: 'sqrt',
@@ -1157,7 +1157,7 @@ const GAME_ITEMS = [
     title: 'ルートの宝石',
     desc: '√n の中に隠れた平方数を見つけて宝石を発見！簡約のしくみを体感',
     icon: '💎',
-    onclick: "window.location.href='games/ルートの宝石.html?_v=' + APP_VERSION",
+    onclick: "window.location.href='practice/ルートの宝石.html?_v=' + APP_VERSION",
     gradient: 'linear-gradient(135deg, #cc66ff, #4477ff)',
     newSince: '2026-06-07', // この日から7日間 NEW!
     category: 'sqrt',
@@ -1166,7 +1166,7 @@ const GAME_ITEMS = [
     title: '二次方程式の基礎',
     desc: 'x² = 9 → ±3、x² = 12 → ±2√3… 穴埋め入力で方程式を復習!',
     icon: '📐',
-    onclick: "window.location.href='games/平方根の方程式.html?_v=' + APP_VERSION",
+    onclick: "window.location.href='practice/平方根の方程式.html?_v=' + APP_VERSION",
     gradient: 'linear-gradient(135deg, #26a69a, #00695c)',
     newSince: '2026-07-06', // この日から7日間 NEW!
     category: 'quadratic',
@@ -1176,7 +1176,7 @@ const GAME_ITEMS = [
     title: '因数分解ディフェンス',
     desc: '式がどんどん迫ってくる! 因数分解して撃ち落とせ! 二次方程式のじゅんび',
     icon: '🛡️',
-    onclick: "window.location.href='games/因数分解ディフェンス.html?_v=' + APP_VERSION",
+    onclick: "window.location.href='practice/因数分解ディフェンス.html?_v=' + APP_VERSION",
     gradient: 'linear-gradient(135deg, #7e57c2, #4527a0)',
     newSince: '2026-07-11', // この日から7日間 NEW!
     category: 'quadratic',
@@ -1186,7 +1186,7 @@ const GAME_ITEMS = [
     title: '放物線シュート',
     desc: '⭐ を通る放物線 y = ax² を撃て! 60秒で何問命中できるかな?',
     icon: '🎯',
-    onclick: "window.location.href='games/放物線シュート.html?_v=' + APP_VERSION",
+    onclick: "window.location.href='practice/放物線シュート.html?_v=' + APP_VERSION",
     gradient: 'linear-gradient(135deg, #26c6da, #00838f)',
     newSince: '2026-10-12', // この日から7日間 NEW!
     category: 'func2',
@@ -1196,7 +1196,7 @@ const GAME_ITEMS = [
     title: '相似の三角形ハンター',
     desc: 'どの相似条件で相似？ 8つの三角形から相似な組を見つけ出せ!',
     icon: '🔺',
-    onclick: "window.location.href='games/相似ハンター.html?_v=' + APP_VERSION",
+    onclick: "window.location.href='practice/相似ハンター.html?_v=' + APP_VERSION",
     gradient: 'linear-gradient(135deg, #66bb6a, #2e7d32)',
     newSince: '2026-10-26', // この日から7日間 NEW!
     category: 'similar',
@@ -1206,7 +1206,7 @@ const GAME_ITEMS = [
     title: 'ルート計算バトル',
     desc: '簡約・乗除・加減・有理化・三乗根を解いてモンスターを倒せ！平方根の総復習',
     icon: '⚔️',
-    onclick: "window.location.href='games/ルート計算バトル.html?_v=' + APP_VERSION",
+    onclick: "window.location.href='practice/ルート計算バトル.html?_v=' + APP_VERSION",
     gradient: 'linear-gradient(135deg, #ff5577, #c8265a)',
     newSince: '2026-06-29', // この日から7日間 NEW!
     category: 'sqrt',
@@ -1383,7 +1383,7 @@ function renderGamesPage() {
              onclick="selectGameCategory('${cat.id}')">
           <span class="game-cat-card-icon">${cat.icon}</span>
           <div class="game-cat-card-title">${cat.label}</div>
-          <div class="game-cat-card-count">ゲーム ${games.length}つ</div>
+          <div class="game-cat-card-count">アプリ ${games.length}つ</div>
           <div class="game-cat-card-cta">選ぶ ›</div>
         </div>
       `;
@@ -1391,7 +1391,7 @@ function renderGamesPage() {
     return `
       <button class="back-btn" onclick="navigate('home')">← ホームに戻る</button>
       <div class="section-title">
-        <h2>🎮 数学ゲーム</h2>
+        <h2>🧮 計算トレーニング</h2>
         <p>カテゴリを選んでね</p>
       </div>
       <div class="game-cat-grid">${catCards}</div>`;
@@ -1416,7 +1416,7 @@ function renderGamesPage() {
           ${cat.icon} ${cat.label}
         </span>
       </h2>
-      <p>遊びたいゲームを選んでね</p>
+      <p>取り組むアプリを選んでね</p>
     </div>
     <div class="games-grid">${cards}</div>`;
 }
@@ -1517,7 +1517,7 @@ const PUZZLE_ITEMS = [
     title: 'FUTOSHIKI',
     desc: '',
     icon: '🔢',
-    onclick: "window.location.href='games/不等号ナンプレ.html?_v=' + APP_VERSION",
+    onclick: "window.location.href='practice/不等号ナンプレ.html?_v=' + APP_VERSION",
     gradient: 'linear-gradient(135deg, #34d399, #059669)',
     newSince: '2026-07-12', // この日から7日間 NEW!
   },
@@ -1525,7 +1525,7 @@ const PUZZLE_ITEMS = [
     title: '修学旅行の夜',
     desc: '',
     icon: '🛏️',
-    onclick: "window.location.href='games/修学旅行の夜.html?_v=' + APP_VERSION",
+    onclick: "window.location.href='practice/修学旅行の夜.html?_v=' + APP_VERSION",
     gradient: 'linear-gradient(135deg, #ff8fa3, #c9184a)',
     newSince: '2026-09-25', // この日から7日間 NEW!
   },
@@ -3444,7 +3444,7 @@ function cmGameOver() {
   overlay.innerHTML = `
     <div class="cm-result">
       <div class="cm-result-icon">💔</div>
-      <div class="cm-result-title">ゲームオーバー</div>
+      <div class="cm-result-title">タイムアップ</div>
       <div class="cm-result-time">${cmFmtTime(cmSeconds)}</div>
       <div class="cm-result-btns">
         <button class="cm-btn cm-btn-primary" onclick="cmStartSolo()">もう一度</button>
@@ -3597,7 +3597,7 @@ function cmGroupComplete() {
   overlay.innerHTML = `
     <div class="cm-result">
       <div class="cm-result-icon">🏆</div>
-      <div class="cm-result-title">ゲーム終了！</div>
+      <div class="cm-result-title">終了！</div>
       <div class="cmg-ranking">${rows}</div>
       <div class="cm-result-btns">
         <button class="cm-btn cm-btn-primary" onclick="cmGroupReplay()">もう一度</button>
@@ -3751,7 +3751,7 @@ function renderCmGroupSetup() {
         </div>
       </div>
       <button class="cm-btn cm-btn-primary cmg-start-btn" onclick="cmStartGroup()">
-        ゲームスタート 🎮
+        スタート 🧮
       </button>
       <button class="cm-back-btn" style="margin-top:0.8rem" onclick="cmBackToMenu()">← 戻る</button>
     </div>`;
@@ -3861,9 +3861,9 @@ function render() {
     document.body.classList.remove('sg-mode');
     document.getElementById('main-content').innerHTML = `
       <div class="shooting-wrap">
-        <button class="shooting-back-btn" onclick="navigate('games')">← ゲーム一覧</button>
+        <button class="shooting-back-btn" onclick="navigate('games')">← 一覧にもどる</button>
         <iframe class="shooting-iframe"
-                src="games/因数分解シューティング.html?_v=${APP_VERSION}"
+                src="practice/因数分解シューティング.html?_v=${APP_VERSION}"
                 title="因数分解シューティング"
                 allow="autoplay"></iframe>
       </div>`;
